@@ -11,7 +11,7 @@ Given a sorted array nums, remove the duplicates in-place such that each element
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 
 Example 1:
-```
+```C++
 Given nums = [1,1,2],
 
 Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
@@ -20,7 +20,7 @@ It doesn't matter what you leave beyond the returned length.
 ```
 
 Example 2:
-```
+```C++
 Given nums = [0,0,1,1,1,2,2,3,3,4],
 
 Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
@@ -36,7 +36,7 @@ Note that the input array is passed in by reference, which means modification to
 
 Internally you can think of this:
 
-```
+```C++
 // nums is passed in by reference. (i.e., without making a copy)
 int len = removeDuplicates(nums);
 
@@ -50,7 +50,7 @@ for (int i = 0; i < len; i++) {
 
 
 ## Solution 
-```
+```C++
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
@@ -69,6 +69,7 @@ public:
     }
 };
 
+
 ```
 
 # String
@@ -77,8 +78,8 @@ public:
 
  Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1. 
 
- Examples: 
- ```
+ Examples 0: 
+ ```C++
  s = "leetcode"
  return 0.
 
@@ -87,7 +88,7 @@ public:
  ```
 ## Solution
 
-```
+```C++
 class Solution {
 public:
     bool isUniqueCharacter( char ch, vector<int> freq){
@@ -139,7 +140,7 @@ Output: [1,2,2,3,5,6]
 
 ## Solution 
 
-```
+```C++
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {        
@@ -171,7 +172,7 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
 You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
 Example:
-```
+```C++
 Given n = 5, and version = 4 is the first bad version.
 
 call isBadVersion(3) -> false
@@ -182,7 +183,7 @@ Then 4 is the first bad version.
 ```
 
 ## Solution
-```
+```C++
 // Forward declaration of isBadVersion API.
 bool isBadVersion(int version);
 
@@ -220,8 +221,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 Note: Given n will be a positive integer.
 
 Example 1:
-
-```
+```C++
 Input: 2
 Output: 2
 Explanation: There are two ways to climb to the top.
@@ -230,7 +230,7 @@ Explanation: There are two ways to climb to the top.
 ```
 
 Example 2:
-```
+```C++
 Input: 3
 Output: 3
 Explanation: There are three ways to climb to the top.
@@ -241,7 +241,7 @@ Explanation: There are three ways to climb to the top.
 
 ## Solution
 
-```
+```C++
 class Solution {
 public:
     int climbStairs(int n) {
@@ -270,7 +270,7 @@ Design a stack that supports push, pop, top, and retrieving the minimum element 
 
 Example
 
-```
+```C++
 MinStack minStack = new MinStack();
 minStack.push(-2);
 minStack.push(0);
@@ -282,7 +282,7 @@ minStack.getMin();   --> Returns -2.
 ```
 
 ## Solution
-```
+```C++
 class MinStack {
 public:
     /** initialize your data structure here. */
@@ -325,7 +325,7 @@ public:
 
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
-```
+```C++
 Symbol       Value
 I             1
 V             5
@@ -348,25 +348,25 @@ Given a roman numeral, convert it to an integer. Input is guaranteed to be withi
 
 Example 1:
 
-```
+```C++
 Input: "III"
 Output: 3
 ```
 
 Example 2:
-```
+```C++
 Input: "IV"
 Output: 4
 ```
 
 Example 3:
-```
+```C++
 Input: "IX"
 Output: 9
 ```
 
 Example 4:
-```
+```C++
 Input: "LVIII"
 Output: 58
 Explanation: L = 50, V= 5, III = 3.
@@ -380,8 +380,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 ```
 
 ## Solution
-```
-
+```C++
 class Solution {
 public:
     int values['Z' - 'A' + 1] = {0};
@@ -440,21 +439,21 @@ public:
 
 Reverse bits of a given 32 bits unsigned integer.
 Example 1:
-```
+```C++
 Input: 00000010100101000001111010011100
 Output: 00111001011110000010100101000000
 Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.
 ```
 
 Example 2:
-```
+```C++
 Input: 11111111111111111111111111111101
 Output: 10111111111111111111111111111111
 Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.
 ```
  
 ## Solution
-```
+```C++
 class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {
@@ -472,6 +471,8 @@ public:
 ```
 
 # Reference
-Leetcode level easy: https://leetcode.com/explore/featured/card/top-interview-questions-easy/
-Leetcode level medium: https://leetcode.com/explore/interview/card/top-interview-questions-medium/
-Linkedin : https://www.linkedin.com/in/truong-le-19b755195/
+* [Leetcode level easy](https://leetcode.com/explore/featured/card/top-interview-questions-easy/)
+
+* [Leetcode level medium](https://leetcode.com/explore/interview/card/top-interview-questions-medium/)
+
+* [Linkedin](https://www.linkedin.com/in/truong-le-19b755195/)
