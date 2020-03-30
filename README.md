@@ -3,14 +3,14 @@
 This is my solution of series interview in leetcode. I have cleanedmy code many times. In my opinion, it is optimal and easy to learn.The interview includes some topics. For example: Array, String, Sorting, Searching, Tree, Graphs, Dynamic Progamming, Math, Bits etc.
 
 # Array 
-## Level: easy
+## Level Easy
 ## Remove Duplicates from Sorted Array
 
 Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 
-Example 1:
+**Example 1**
 ```C++
 Given nums = [1,1,2],
 
@@ -19,7 +19,7 @@ Your function should return length = 2, with the first two elements of nums bein
 It doesn't matter what you leave beyond the returned length.
 ```
 
-Example 2:
+**Example 2**
 ```C++
 Given nums = [0,0,1,1,1,2,2,3,3,4],
 
@@ -28,7 +28,7 @@ Your function should return length = 5, with the first five elements of nums bei
 It doesn't matter what values are set beyond the returned length.
 ```
 
-Clarification:
+**Clarification**
 
 Confused why the returned value is an integer but your answer is an array?
 
@@ -73,12 +73,12 @@ public:
 ```
 
 # String
-## Level: easy
+## Level Easy
 ## First Unique Character in a String
 
  Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1. 
 
- Examples 0: 
+ **Examples 0** 
  ```C++
  s = "leetcode"
  return 0.
@@ -119,7 +119,7 @@ public:
 ```
 
 # Sorting and Searching
-## Level: easy
+## Level Easy
 ## Merge Sorted Array
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 
@@ -128,8 +128,7 @@ Note:
     The number of elements initialized in nums1 and nums2 are m and n respectively.
     You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
 
-Example:
-
+**Example**
 ```
 Input:
 nums1 = [1,2,3,0,0,0], m = 3
@@ -171,7 +170,7 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
 
 You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
-Example:
+**Example**
 ```C++
 Given n = 5, and version = 4 is the first bad version.
 
@@ -211,7 +210,7 @@ public:
 ```
 
 # Dynamic Programming
-## Level: easy
+## Level Easy
 ## Climbing Stairs
 
 You are climbing a stair case. It takes n steps to reach to the top.
@@ -220,7 +219,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 
 Note: Given n will be a positive integer.
 
-Example 1:
+**Example 1**
 ```C++
 Input: 2
 Output: 2
@@ -229,7 +228,7 @@ Explanation: There are two ways to climb to the top.
 2. 2 steps
 ```
 
-Example 2:
+**Example 2**
 ```C++
 Input: 3
 Output: 3
@@ -258,7 +257,7 @@ public:
 ```
 
 # Design 
-## Level: easy
+## Level Easy
 ## Min stack
 
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
@@ -268,7 +267,7 @@ Design a stack that supports push, pop, top, and retrieving the minimum element 
     top() -- Get the top element.
     getMin() -- Retrieve the minimum element in the stack.
 
-Example
+**Example**
 
 ```C++
 MinStack minStack = new MinStack();
@@ -346,33 +345,33 @@ Roman numerals are usually written largest to smallest from left to right. Howev
 
 Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
 
-Example 1:
+**Example 1**
 
 ```C++
 Input: "III"
 Output: 3
 ```
 
-Example 2:
+**Example 2**
 ```C++
 Input: "IV"
 Output: 4
 ```
 
-Example 3:
+**Example 3**
 ```C++
 Input: "IX"
 Output: 9
 ```
 
-Example 4:
+**Example 4**
 ```C++
 Input: "LVIII"
 Output: 58
 Explanation: L = 50, V= 5, III = 3.
 ```
 
-Example 5:
+**Example 5**
 ```
 Input: "MCMXCIV"
 Output: 1994
@@ -434,18 +433,18 @@ public:
 };
 ```
 # Other 
-## Level: easy
+## Level Easy
 ## Reverse Bits
 
 Reverse bits of a given 32 bits unsigned integer.
-Example 1:
+**Example 1**
 ```C++
 Input: 00000010100101000001111010011100
 Output: 00111001011110000010100101000000
 Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.
 ```
 
-Example 2:
+**Example 2**
 ```C++
 Input: 11111111111111111111111111111101
 Output: 10111111111111111111111111111111
