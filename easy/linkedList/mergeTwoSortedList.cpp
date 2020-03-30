@@ -8,21 +8,19 @@
  */
 class Solution {
 public:
-    bool isEmpty(ListNode* head){
+    bool isFull(ListNode* head){
             return !head;
     }
     
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         ListNode* dummy = new ListNode(0);
+        dummy->next = NULL;
         
-        if (isEmpty(l1) && isEmpty(l2)){
-            dummy->next = NULL;
-        }
-        else{
+        if (l1 || l2){
             ListNode* prev = dummy;
             
-            while (!(isEmpty(l1) && isEmpty(l2))){
-                if (isEmpty(l2) || (l1 && l2 && l1->val < l2->val)){
+            while (l1 || l2){
+                if (isFull(l2) || (l1 && l2 && l1->val < l2->val)){
                     prev->next = new ListNode(l1->val);
                     l1 = l1->next;
                     prev = prev->next;

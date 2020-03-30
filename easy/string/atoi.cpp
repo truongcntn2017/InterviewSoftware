@@ -3,31 +3,34 @@ public:
 bool isDigit(char s){
     return ('0' <= s && s <= '9');
 }
+int getInRange(long long a){
+    return (a > 0) ? min(a, (long long)(INT_MAX)): max(a, (long long)INT_MIN);
+}
     
 int myAtoi(string str) {
     long long res = 0;
-    int sign_factor = 1;
-    bool start_parse = false;
+    int signFactor = 1;
+    bool startParse = false;
     
     for (int i=0; i<str.size();++i){
-        if (str[i] == ' ' and not start_parse){
+        if (str[i] == ' ' and not startParse){
             continue;
         }
         else if (isDigit(str[i])){
-            start_parse = true;
+            startParse = true;
             res = res*10 + (str[i]-'0');
             res = min(res, (long long)pow(2, 31));
         }
-        else if((str[i] == '+' || str[i] == '-') && !start_parse){
-            start_parse = true;
-            sign_factor = (str[i] == '+') ? 1 : -1;
+        else if((str[i] == '+' || str[i] == '-') && !startParse){
+            startParse = true;
+            signFactor = (str[i] == '+') ? 1 : -1;
         }
         else{
             break;
         }
     }
     
-    return (sign_factor == 1) ? min(res, (long long)INT_MAX): max(res*sign_factor, (long long)INT_MIN);
+    return getInRange(signFactor*res);
 }
 
 
