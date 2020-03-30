@@ -7,21 +7,18 @@ public:
         int left = 1;
         int right = n;
         int mid;
-        int res;
         
         
-        while (left <= right){
+        while (left < right){
             mid = left  + (right-left) / 2;
-            // mid = (left + right)/ 2;
             if (isBadVersion(mid)){
-                res = mid;
-                right = mid - 1;
+                right = mid;
             }
             else{
                 left = mid + 1;
             }
         }
         
-        return res;
+        return left;
     }
 };

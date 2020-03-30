@@ -11,12 +11,14 @@ public:
     bool isEqual(vector<int> a, vector<int> b){
         bool equal = (a.size() == b.size());
         
-        for (int i=0; i<a.size();++i){
-            if (a[i] != b[i]){
-                equal = false;
-                break;
-            }
-        }
+	    if (equal){
+            for (int i=0; i<a.size();++i){
+            	if (a[i] != b[i]){
+                   equal = false;
+                   break;
+                }
+           }
+	    }
         
         return equal;
     }
